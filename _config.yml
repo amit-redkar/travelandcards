@@ -1,0 +1,60 @@
+title: "Travel and Cards"
+email: ""
+description: "India's best guides on credit cards, points, miles, travel hacks & smart strategies."
+url: "https://travelandcards.in"
+baseurl: ""
+
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+markdown: kramdown
+highlighter: rouge
+
+collections:
+  posts:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+sass:
+  style: compressed
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+
+include:
+  - _pages
+
+# Permalinks
+permalink: /:year/:month/:day/:title/
+
+# Build configuration
+paginate: 10
+paginate_path: "/page:num/"
+
+# Netlify CMS media folder
+collections:
+  - name: "posts"
+    label: "Posts"
+    folder: "posts"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Category", name: "category", widget: "select", options: ["Credit Cards", "Points & Miles", "Travel", "Loyalty", "Visa & Tips"]}
+      - {label: "Tags", name: "tags", widget: "list"}
+      - {label: "YouTube URL", name: "youtube_url", widget: "string"}
+      - {label: "Thumbnail", name: "thumbnail", widget: "image"}
+      - {label: "SEO Description", name: "seo_description", widget: "string"}
+      - {label: "SEO Keywords", name: "seo_keywords", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
