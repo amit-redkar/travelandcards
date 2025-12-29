@@ -1,2 +1,32 @@
-plugins:
-  - jekyll-sitemap
+---
+layout: none
+permalink: /sitemap.xml
+---
+
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Homepage -->
+  <url>
+    <loc>{{ site.url }}/</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+  </url>
+
+  <!-- Posts -->
+  {% for post in site.posts %}
+  <url>
+    <loc>{{ site.url }}{{ post.url }}</loc>
+    <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+  </url>
+  {% endfor %}
+
+  <!-- Category Pages -->
+  {% assign cats = "credit-cards,points-miles,travel,loyalty,visa-tips" | split: "," %}
+  {% for cat in cats %}
+  <url>
+    <loc>{{ site.url }}/category/{{ cat }}/</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+  </url>
+  {% endfor %}
+
+</urlset>
