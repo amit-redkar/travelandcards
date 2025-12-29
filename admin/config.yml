@@ -3,7 +3,12 @@ backend:
   repo: travelandcards/travelandcards
   branch: main
 
-media_folder: "assets/uploads"
+  # GitHub OAuth App (Client ID + OAuth proxy)
+  auth_endpoint: https://api.staticbackend.dev/netlify-cms/oauth/github
+  app_id: "Ov23liZM6RLdjo9FoD1K"
+  auth_scope: "public_repo"
+
+media_folder: "assets/uploads"    # where images are stored
 public_folder: "/assets/uploads"
 
 publish_mode: editorial_workflow
@@ -17,7 +22,8 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Category", name: "category", widget: "select", options: ["Credit Cards", "Points & Miles", "Travel", "Loyalty", "Visa & Tips"] }
+      - { label: "Category", name: "category", widget: "select",
+          options: ["Credit Cards", "Points & Miles", "Travel", "Loyalty", "Visa & Tips"] }
       - { label: "Tags", name: "tags", widget: "list" }
       - { label: "YouTube URL", name: "youtube_url", widget: "string" }
       - { label: "Thumbnail Image", name: "thumbnail", widget: "image" }
