@@ -5,23 +5,13 @@ url: "https://travelandcards.in"
 baseurl: ""
 
 theme: minima
+
 plugins:
   - jekyll-feed
   - jekyll-sitemap
 
 markdown: kramdown
 highlighter: rouge
-
-collections:
-  posts:
-    output: true
-
-defaults:
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
 
 sass:
   style: compressed
@@ -37,11 +27,10 @@ include:
 # Permalinks
 permalink: /:year/:month/:day/:title/
 
-# Build configuration
 paginate: 10
 paginate_path: "/page:num/"
 
-# Netlify CMS media folder
+# Netlify CMS configuration
 collections:
   - name: "posts"
     label: "Posts"
