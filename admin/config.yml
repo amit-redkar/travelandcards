@@ -2,11 +2,8 @@ backend:
   name: github
   repo: amit-redkar/travelandcards
   branch: main
-
-  # OAuth via StaticBackend
-  auth_endpoint: https://api.staticbackend.dev/netlify-cms/oauth/github
-  base_url: https://api.staticbackend.dev
-  oauth_proxy_url: https://api.staticbackend.dev/netlify-cms/oauth
+  base_url: https://travelandcards.in/admin/auth
+  auth_endpoint: oauth/github
 
   # GitHub OAuth App (Client ID + OAuth proxy)
   app_id: "Ov23liZM6RLdjo9FoD1K"
