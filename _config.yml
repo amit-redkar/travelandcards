@@ -1,11 +1,11 @@
 title: "Travel and Cards"
-email: ""
 description: "India's best guides on credit cards, points, miles, travel hacks & smart strategies."
 url: "https://travelandcards.in"
 baseurl: ""
 
 theme: minima
 
+# GitHub Pages supported plugins
 plugins:
   - jekyll-feed
   - jekyll-sitemap
@@ -20,30 +20,59 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - node_modules
+  - README.md
 
-include:
-  - _pages
+# Permalink format
+permalink: /:categories/:title/
 
-# Permalinks
-permalink: /:year/:month/:day/:title/
+# PAGINATION (compatible with GH Pages)
+paginate: 6
+paginate_path: "page:num"
 
-paginate: 10
-paginate_path: "/page:num/"
+# ------------------------------
+# NETLIFY CMS COLLECTION CONFIG
+# ------------------------------
+# Note: CMS config MUST be inside a top-level key OTHER THAN "collections"
+# to avoid Jekyll parsing errors.
 
-# Netlify CMS configuration
-collections:
-  - name: "posts"
+cms_collections:
+  posts:
+    name: "posts"
     label: "Posts"
     folder: "posts"
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Category", name: "category", widget: "select", options: ["Credit Cards", "Points & Miles", "Travel", "Loyalty", "Visa & Tips"]}
-      - {label: "Tags", name: "tags", widget: "list"}
-      - {label: "YouTube URL", name: "youtube_url", widget: "string"}
-      - {label: "Thumbnail", name: "thumbnail", widget: "image"}
-      - {label: "SEO Description", name: "seo_description", widget: "string"}
-      - {label: "SEO Keywords", name: "seo_keywords", widget: "string"}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - label: "Title"
+        name: "title"
+        widget: "string"
+      - label: "Publish Date"
+        name: "date"
+        widget: "datetime"
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options:
+          - "Credit Cards"
+          - "Points & Miles"
+          - "Travel"
+          - "Loyalty"
+          - "Visa & Tips"
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+      - label: "YouTube URL"
+        name: "youtube_url"
+        widget: "string"
+      - label: "Thumbnail"
+        name: "thumbnail"
+        widget: "image"
+      - label: "SEO Description"
+        name: "seo_description"
+        widget: "string"
+      - label: "SEO Keywords"
+        name: "seo_keywords"
+        widget: "string"
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
