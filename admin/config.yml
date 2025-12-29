@@ -2,7 +2,7 @@ backend:
   name: github
   repo: amit-redkar/travelandcards
   branch: main
-  base_url: https://travelandcards.in/admin/auth
+  base_url: https://travelandcards.in/admin
 
 
   # GitHub OAuth App (Client ID + OAuth proxy)
