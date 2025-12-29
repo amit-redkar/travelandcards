@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: travelandcards/travelandcards
+  repo: travelandcards
   branch: main
 
   # GitHub OAuth App (Client ID + OAuth proxy)
