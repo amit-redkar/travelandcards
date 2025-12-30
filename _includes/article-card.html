@@ -1,0 +1,17 @@
+<a href="{{ include.post.url }}" class="article-card">
+  <div class="card-thumbnail">
+    <img src="{{ include.post.thumbnail }}" alt="{{ include.post.title }}" loading="lazy">
+    <div class="play-overlay">
+      <svg viewBox="0 0 24 24" fill="white">
+        <path d="M8 5v14l11-7z"/>
+      </svg>
+    </div>
+  </div>
+  <div class="card-content">
+    <h3 class="card-title">{{ include.post.title }}</h3>
+    <div class="card-meta">
+      <span class="card-category">{{ include.post.category }}</span>
+      <span class="card-date">{{ include.post.date | date: "%b %d, %Y" }}</span>
+    </div>
+  </div>
+</a>

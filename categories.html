@@ -1,0 +1,22 @@
+---
+layout: default
+title: Categories
+permalink: /categories/
+---
+<div class="categories-page">
+  <h1 class="page-title">Categories</h1>
+  
+  {% assign categories = site.posts | map: "category" | uniq %}
+  
+  {% for category in categories %}
+    <section class="category-section" id="{{ category | slugify }}">
+      <h2 class="category-title">{{ category }}</h2>
+      <div class="articles-grid">
+        {% assign cat_posts = site.posts | where: "category", category %}
+        {% for post in cat_posts limit:4 %}
+          {% include article-card.html post=post %}
+        {% endfor %}
+      </div>
+    </section>
+  {% endfor %}
+</div>

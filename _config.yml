@@ -1,0 +1,33 @@
+title: Travel And Cards
+description: Credit card reviews, miles hacks, travel itineraries & visa guides
+url: "https://yourdomain.com"
+baseurl: ""
+permalink: /:slug/
+
+youtube_channel: "https://www.youtube.com/@travelandcards"
+author: Travel And Cards
+
+markdown: kramdown
+highlighter: rouge
+
+collections:
+  posts:
+    output: true
+    permalink: /:slug/
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+exclude:
+  - README.md
+  - node_modules
+  - vendor
+  - setup.sh
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed

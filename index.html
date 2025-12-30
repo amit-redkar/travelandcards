@@ -1,0 +1,19 @@
+---
+layout: default
+title: Home
+---
+<div class="home-page">
+  <section class="hero">
+    <h1>Travel And Cards</h1>
+    <p>Credit card reviews, miles hacks, travel itineraries & visa guides</p>
+  </section>
+
+  <section class="latest-videos">
+    <h2 class="section-title">Latest Videos</h2>
+    <div class="articles-grid">
+      {% for post in site.posts limit:12 %}
+        {% include article-card.html post=post %}
+      {% endfor %}
+    </div>
+  </section>
+</div>
