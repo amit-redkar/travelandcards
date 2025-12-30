@@ -1,8 +1,8 @@
 backend:
   name: github
-  repo: YOUR_GITHUB_USERNAME/YOUR_REPO_NAME
+  repo: amit-redkar/travelandcards
   branch: main
-  base_url: https://YOUR_WORKER_NAME.YOUR_SUBDOMAIN.workers.dev
+  base_url: https://travelandcards-oauth.amit92r.workers.dev
   auth_endpoint: /auth
 
 media_folder: "assets/uploads"
@@ -32,3 +32,13 @@ collections:
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "SEO Keywords", name: "seo_keywords", widget: "string", hint: "Comma-separated keywords" }
       - { label: "SEO Description", name: "seo_description", widget: "text", hint: "150-160 characters recommended" }
+```
+
+---
+
+**File 3: `robots.txt`** (replace entire file)
+```
+User-agent: *
+Allow: /
+
+Sitemap: https://travelandcards.in/sitemap.xml
