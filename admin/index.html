@@ -1,14 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="UTF-8" />
     <title>Travel & Cards CMS</title>
 
-    <!-- Decap CMS (GitHub Pages compatible) -->
-    <script src="https://unpkg.com/decap-cms@3.4.0/dist/decap-cms.js"></script>
+    <!-- Decap CMS (Stable Working Version) -->
+    <script src="https://cdn.jsdelivr.net/npm/decap-cms-app@3.3.1/dist/decap-cms-app.js"></script>
   </head>
 
   <body>
-    <!-- Decap CMS auto-initializes. No CMS.init() required. -->
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        CMS.init();
+      });
+    </script>
   </body>
 </html>
