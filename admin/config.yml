@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: amit-redkar/travelandcards
-  branch: main
+  branch: master
   base_url: https://travelandcards-oauth.amit92r.workers.dev
   auth_endpoint: /auth
 
