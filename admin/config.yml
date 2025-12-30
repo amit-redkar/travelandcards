@@ -2,12 +2,11 @@ backend:
   name: github
   repo: amit-redkar/travelandcards
   branch: main
-  base_url: https://travelandcards.in/admin
+  base_url: https://travelandcards.in/admin/auth
 
-
-  # GitHub OAuth App (Client ID + OAuth proxy)
   app_id: "Ov23liZM6RLdjo9FoD1K"
   auth_scope: "public_repo"
+
 
 media_folder: "assets/uploads"    # where images are stored
 public_folder: "/assets/uploads"
