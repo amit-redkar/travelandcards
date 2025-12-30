@@ -3,32 +3,10 @@ backend:
   repo: amit-redkar/travelandcards
   branch: main
 
-site_url: https://travelandcards.in
-display_url: https://travelandcards.in
-
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
 
-publish_mode: editorial_workflow
+site_url: https://travelandcards.in
+display_url: https://travelandcards.in
 
-collections:
-  - name: posts
-    label: Posts
-    folder: posts
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - {
-          label: "Category",
-          name: "category",
-          widget: "select",
-          options: ["Credit Cards", "Points & Miles", "Travel", "Loyalty", "Visa & Tips"]
-        }
-      - { label: "Tags", name: "tags", widget: "list" }
-      - { label: "YouTube URL", name: "youtube_url", widget: "string" }
-      - { label: "Thumbnail Image", name: "thumbnail", widget: "image" }
-      - { label: "SEO Description", name: "seo_description", widget: "string" }
-      - { label: "SEO Keywords", name: "seo_keywords", widget: "string" }
-      - { label: "Body Content", name: "body", widget: "markdown" }
+publish_mode: editorial_workflow
