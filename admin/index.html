@@ -1,19 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Travel & Cards CMS</title>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Travel & Cards CMS</title>
 
-    <!-- Decap CMS -->
-    <script src="https://unpkg.com/decap-cms@3.3.0/dist/decap-cms.js"></script>
-  </head>
+  <!-- Load Decap CMS -->
+  <script src="https://unpkg.com/decap-cms@3.3.0/dist/decap-cms.js"></script>
+</head>
 
-  <body>
-    <!-- Load CMS -->
-    <script>
-      window.addEventListener("load", () => {
-        CMS.init();
-      });
-    </script>
-  </body>
+<body>
+  <!-- Mount CMS -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // For Decap CMS 3+, init happens automatically.
+      // CMS.init() must NOT be used.
+    });
+  </script>
+</body>
 </html>
