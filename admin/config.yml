@@ -3,6 +3,8 @@ backend:
   repo: amit-redkar/travelandcards
   branch: main
   base_url: https://travelandcards.in/admin/auth
+  auth_endpoint: github
+
   app_id: "Ov23liZM6RLdjo9FoD1K"
   auth_scope: "public_repo"
 
