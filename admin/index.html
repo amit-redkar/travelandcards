@@ -1,15 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
     <title>Travel & Cards CMS</title>
 
-    <!-- Decap CMS (Netlify CMS v3) -->
+    <!-- Decap CMS -->
     <script src="https://unpkg.com/decap-cms@3.3.0/dist/decap-cms.js"></script>
   </head>
+
   <body>
+    <!-- Load CMS -->
     <script>
-      CMS.init();
+      window.addEventListener("load", () => {
+        CMS.init();
+      });
     </script>
   </body>
 </html>
