@@ -3,18 +3,14 @@ backend:
   repo: amit-redkar/travelandcards
   branch: main
 
-  # Cloudflare Worker OAuth proxy
   base_url: https://travelandcards-auth.amit92r.workers.dev
   auth_endpoint: github
-
-  # GitHub OAuth App
   app_id: "Ov23liZM6RLdjo9FoD1K"
   auth_scope: public_repo
 
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
 
-# Needed for CMS
 site_url: https://travelandcards.in
 display_url: https://travelandcards.in
 
